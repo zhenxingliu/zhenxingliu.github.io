@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://zhenxingliu.github.io">
-  <title>Archives: 2019/12 | 岁月随想</title>
+  <title>Java集合框架原码解析笔记(一) | 岁月随想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="岁月随想">
-<meta property="og:url" content="http://zhenxingliu.github.io/archives/2019/12/index.html">
+  <meta name="description" content="Java集合框架是Java基础，用来对对象进行集合操作，总体图如下：    框架图说明Java集合框架主要分为List,Set,Map三类，每一类为了不同的业务场景又有很多不同的实现。其中List和Set都是实现了Collection的子分类.  List(对付顺序的好帮手)： List接口存储一组不唯一（可以有多个元素引用相同的对象），有序的对象 Set(注重独一无二的性质): 不允许重复">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java集合框架原码解析笔记(一)">
+<meta property="og:url" content="http://zhenxingliu.github.io/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%80/index.html">
 <meta property="og:site_name" content="岁月随想">
+<meta property="og:description" content="Java集合框架是Java基础，用来对对象进行集合操作，总体图如下：    框架图说明Java集合框架主要分为List,Set,Map三类，每一类为了不同的业务场景又有很多不同的实现。其中List和Set都是实现了Collection的子分类.  List(对付顺序的好帮手)： List接口存储一组不唯一（可以有多个元素引用相同的对象），有序的对象 Set(注重独一无二的性质): 不允许重复">
 <meta property="og:locale" content="zh">
+<meta property="og:image" content="http://q3d7i1eji.bkt.clouddn.com/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%80%BB%E5%9B%BE.png">
+<meta property="article:published_time" content="2019-12-31T07:19:46.000Z">
+<meta property="article:modified_time" content="2019-12-31T07:28:32.775Z">
 <meta property="article:author" content="blueheart">
+<meta property="article:tag" content="Java,源码">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://q3d7i1eji.bkt.clouddn.com/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%80%BB%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="岁月随想" type="application/atom+xml">
   
@@ -150,36 +157,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java集合框架原码解析笔记-一" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="archive-article-date">
-  	<time datetime="2019-12-31T07:19:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%80/">Java集合框架原码解析笔记(一)</a>
+    <h1 class="article-title" itemprop="name">
+      Java集合框架原码解析笔记(一)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="archive-article-date">
+  	<time datetime="2019-12-31T07:19:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>   Java集合框架是Java基础，用来对对象进行集合操作，总体图如下：<br>   <img src="http://q3d7i1eji.bkt.clouddn.com/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%80%BB%E5%9B%BE.png" alt="JavaCollection图"></p>
+<h2 id="框架图说明"><a href="#框架图说明" class="headerlink" title="框架图说明"></a>框架图说明</h2><p>Java集合框架主要分为List,Set,Map三类，每一类为了不同的业务场景又有很多不同的实现。其中List和Set都是实现了Collection的子分类.</p>
+<ul>
+<li>List(对付顺序的好帮手)： List接口存储一组不唯一（可以有多个元素引用相同的对象），有序的对象</li>
+<li>Set(注重独一无二的性质): 不允许重复的集合。不会有多个元素引用相同的对象。</li>
+<li>Map(用Key来搜索的专家): 使用键值对存储。Map会维护与Key有关联的值。两个Key可以引用相同的对象，但Key不能重复，典型的Key是String类型，但也可以是任何对象。</li>
+</ul>
+<p>在集合框架中为主要使用模板方法设计模式，同时，为了实现多继承关系，将接口和基本实现分别在多个接口和类不加以实现，以实现类的多重继承关系。后续章节会逐步进行分析和说明。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,84 +225,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zhenxingliu.github.io/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/31/2019%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2019-12-31T06:03:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-31</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/31/2019%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2019年最后一天</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/31/2019%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/">2019年最后一天</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">感悟,生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/31/hello-world/" class="archive-article-date">
-  	<time datetime="2019-12-31T03:19:28.232Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/31/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -291,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

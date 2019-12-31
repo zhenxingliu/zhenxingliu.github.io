@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>岁月随想</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://zhenxingliu.github.io/"/>
+  <updated>2019-12-31T07:28:32.775Z</updated>
+  <id>http://zhenxingliu.github.io/</id>
+  
+  <author>
+    <name>blueheart</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java集合框架原码解析笔记(一)</title>
+    <link href="http://zhenxingliu.github.io/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%80/"/>
+    <id>http://zhenxingliu.github.io/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%80/</id>
+    <published>2019-12-31T07:19:46.000Z</published>
+    <updated>2019-12-31T07:28:32.775Z</updated>
+    
+    <content type="html"><![CDATA[<p>   Java集合框架是Java基础，用来对对象进行集合操作，总体图如下：<br>   <img src="http://q3d7i1eji.bkt.clouddn.com/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%80%BB%E5%9B%BE.png" alt="JavaCollection图"></p><h2 id="框架图说明"><a href="#框架图说明" class="headerlink" title="框架图说明"></a>框架图说明</h2><p>Java集合框架主要分为List,Set,Map三类，每一类为了不同的业务场景又有很多不同的实现。其中List和Set都是实现了Collection的子分类.</p><ul><li>List(对付顺序的好帮手)： List接口存储一组不唯一（可以有多个元素引用相同的对象），有序的对象</li><li>Set(注重独一无二的性质): 不允许重复的集合。不会有多个元素引用相同的对象。</li><li>Map(用Key来搜索的专家): 使用键值对存储。Map会维护与Key有关联的值。两个Key可以引用相同的对象，但Key不能重复，典型的Key是String类型，但也可以是任何对象。</li></ul><p>在集合框架中为主要使用模板方法设计模式，同时，为了实现多继承关系，将接口和基本实现分别在多个接口和类不加以实现，以实现类的多重继承关系。后续章节会逐步进行分析和说明。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;   Java集合框架是Java基础，用来对对象进行集合操作，总体图如下：&lt;br&gt;   &lt;img src=&quot;http://q3d7i1eji.bkt.clouddn.com/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%80%BB%
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java,源码" scheme="http://zhenxingliu.github.io/tags/Java-%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019年最后一天</title>
+    <link href="http://zhenxingliu.github.io/2019/12/31/2019%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/"/>
+    <id>http://zhenxingliu.github.io/2019/12/31/2019%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</id>
+    <published>2019-12-31T06:03:30.000Z</published>
+    <updated>2019-12-31T06:22:18.648Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这是2019年最后一天了，也是这个博客正式上线的第一天，是结束，也是开始。即将到来的2020年，第一大喜事是会迎来我的第二个宝贝，当我从现在开始，我要加倍努力，争取在未来的日子里能给我的宝贝们更好的生活，加油！！！！</p></blockquote><h2 id="2020计划"><a href="#2020计划" class="headerlink" title="2020计划"></a>2020计划</h2><ol><li>自律</li><li>读完20本书</li><li>阅读JDK和Spring框架源代码</li><li>做两个项目</li><li>每周写一篇博客</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;这是2019年最后一天了，也是这个博客正式上线的第一天，是结束，也是开始。即将到来的2020年，第一大喜事是会迎来我的第二个宝贝，当我从现在开始，我要加倍努力，争取在未来的日子里能给我的宝贝们更好的生活，加油！！！！&lt;/p&gt;
+&lt;/blockquot
+      
+    
+    </summary>
+    
+    
+    
+      <category term="感悟,生活" scheme="http://zhenxingliu.github.io/tags/%E6%84%9F%E6%82%9F-%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://zhenxingliu.github.io/2019/12/31/hello-world/"/>
+    <id>http://zhenxingliu.github.io/2019/12/31/hello-world/</id>
+    <published>2019-12-31T03:19:28.232Z</published>
+    <updated>2019-12-31T03:19:28.232Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
