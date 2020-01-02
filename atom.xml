@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhenxingliu.github.io/"/>
-  <updated>2019-12-31T07:42:52.290Z</updated>
+  <updated>2020-01-02T01:59:04.303Z</updated>
   <id>http://zhenxingliu.github.io/</id>
   
   <author>
@@ -17,17 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2020,干就对了</title>
+    <link href="http://zhenxingliu.github.io/2020/01/02/2020-%E5%B9%B2%E5%B0%B1%E5%AF%B9%E4%BA%86/"/>
+    <id>http://zhenxingliu.github.io/2020/01/02/2020-%E5%B9%B2%E5%B0%B1%E5%AF%B9%E4%BA%86/</id>
+    <published>2020-01-02T01:49:02.000Z</published>
+    <updated>2020-01-02T01:59:04.303Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>2020年新年第一天，放假，晚上的时候想起去听听老罗“2019 时间的朋友”跨年演讲，听完第一段，最喜欢的就是这句话–“干就对了”。干就对了，多么简单的几个字，但又是多么经典的几个字，少空想一些，想了就去做，人生哪有那么多的规划和按步就班，有梦想就去干，脚踏实地的干，认认真真的干，成功的人生都是干出来的，不是总结出来的，不是想出来的。</p></blockquote><p><strong>2020，借用习大大的一句话“撸起袖子加油干”–2020，加油，加油，加油！！！</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;2020年新年第一天，放假，晚上的时候想起去听听老罗“2019 时间的朋友”跨年演讲，听完第一段，最喜欢的就是这句话–“干就对了”。干就对了，多么简单的几个字，但又是多么经典的几个字，少空想一些，想了就去做，人生哪有那么多的规划和按步就班，有梦想就
+      
+    
+    </summary>
+    
+    
+    
+      <category term="笔记,感悟" scheme="http://zhenxingliu.github.io/tags/%E7%AC%94%E8%AE%B0-%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java集合框架原码解析笔记(四)</title>
     <link href="http://zhenxingliu.github.io/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E5%9B%9B/"/>
     <id>http://zhenxingliu.github.io/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E5%9B%9B/</id>
     <published>2019-12-31T07:42:52.000Z</published>
-    <updated>2019-12-31T07:42:52.290Z</updated>
+    <updated>2020-01-02T01:48:27.378Z</updated>
     
     <summary type="html">
     
     </summary>
     
     
+    
+      <category term="Java,源码" scheme="http://zhenxingliu.github.io/tags/Java-%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
@@ -36,13 +63,15 @@
     <link href="http://zhenxingliu.github.io/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%89/"/>
     <id>http://zhenxingliu.github.io/2019/12/31/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0-%E4%B8%89/</id>
     <published>2019-12-31T07:42:47.000Z</published>
-    <updated>2019-12-31T07:42:47.552Z</updated>
+    <updated>2020-01-02T01:48:29.446Z</updated>
     
     <summary type="html">
     
     </summary>
     
     
+    
+      <category term="Java,源码" scheme="http://zhenxingliu.github.io/tags/Java-%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
