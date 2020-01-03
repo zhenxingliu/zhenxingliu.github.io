@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhenxingliu.github.io/"/>
-  <updated>2020-01-02T01:59:04.303Z</updated>
+  <updated>2020-01-03T14:37:39.567Z</updated>
   <id>http://zhenxingliu.github.io/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019-2020时间的朋友跨年演讲经典名句</title>
+    <link href="http://zhenxingliu.github.io/2020/01/03/2019-2020%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2%E7%BB%8F%E5%85%B8%E5%90%8D%E5%8F%A5/"/>
+    <id>http://zhenxingliu.github.io/2020/01/03/2019-2020%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2%E7%BB%8F%E5%85%B8%E5%90%8D%E5%8F%A5/</id>
+    <published>2020-01-03T14:28:07.000Z</published>
+    <updated>2020-01-03T14:37:39.567Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><strong>直面挑战 躬身入局 皆为我辈</strong></li><li><strong>不要走在我后面，因为我可能不会引路。不要走在我前面，因为我可能不会跟随。请走在我的身边，做我的朋友。</strong></li><li><strong>结网能力</strong></li><li><strong>人连接人</strong></li><li><strong>攀岩模式</strong></li></ul><blockquote><p><strong>埋头干+连接人+点亮人–我辈有为！！！</strong></p></blockquote><p><a href="https://pic1cdn.luojilab.com/html/p/Jwzkg4J/2PXAwpjkwOumOyVWEARg.html" target="_blank" rel="noopener">我辈有为</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;直面挑战 躬身入局 皆为我辈&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不要走在我后面，因为我可能不会引路。不要走在我前面，因为我可能不会跟随。请走在我的身边，做我的朋友。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结网能力&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="人生,感悟" scheme="http://zhenxingliu.github.io/tags/%E4%BA%BA%E7%94%9F-%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试学习笔记(-)</title>
+    <link href="http://zhenxingliu.github.io/2020/01/03/%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://zhenxingliu.github.io/2020/01/03/%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-01-03T13:53:24.000Z</published>
+    <updated>2020-01-03T13:55:39.573Z</updated>
+    
+    <content type="html"><![CDATA[<p>提纲：</p><h2 id="性能测试概念"><a href="#性能测试概念" class="headerlink" title="性能测试概念"></a>性能测试概念</h2><pre><code>+ 性能测试+ 压力测试+ 负载测试+ 并发数+ 响应时间+ 在线用户+ PV+ 吞吐量+ 业务成功率+ 系统资源耗用    + cpu    + 内存    + 网络带宽    + 磁盘</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;提纲：&lt;/p&gt;
+&lt;h2 id=&quot;性能测试概念&quot;&gt;&lt;a href=&quot;#性能测试概念&quot; class=&quot;headerlink&quot; title=&quot;性能测试概念&quot;&gt;&lt;/a&gt;性能测试概念&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;+ 性能测试
++ 压力测试
++ 负载测试
++ 并发数
++ 响应时间
++
+      
+    
+    </summary>
+    
+    
+    
+      <category term="测试,loadRunner" scheme="http://zhenxingliu.github.io/tags/%E6%B5%8B%E8%AF%95-loadRunner/"/>
+    
+  </entry>
   
   <entry>
     <title>2020,干就对了</title>
