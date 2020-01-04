@@ -48,9 +48,9 @@
     <link href="http://zhenxingliu.github.io/2020/01/03/%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://zhenxingliu.github.io/2020/01/03/%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2020-01-03T13:53:24.000Z</published>
-    <updated>2020-01-03T13:55:39.573Z</updated>
+    <updated>2020-01-04T11:43:43.760Z</updated>
     
-    <content type="html"><![CDATA[<p>提纲：</p><h2 id="性能测试概念"><a href="#性能测试概念" class="headerlink" title="性能测试概念"></a>性能测试概念</h2><pre><code>+ 性能测试+ 压力测试+ 负载测试+ 并发数+ 响应时间+ 在线用户+ PV+ 吞吐量+ 业务成功率+ 系统资源耗用    + cpu    + 内存    + 网络带宽    + 磁盘</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>提纲：</p><h2 id="性能测试概念"><a href="#性能测试概念" class="headerlink" title="性能测试概念"></a>性能测试概念</h2><pre><code>+ 性能测试+ 压力测试    长时间的稳定性能力+ 负载测试    单位时间内的服务能力+ 并发用户数    是指同一时刻与服务器进行数据交互的所有用户数量。    OA系统的并发用户数一般是在线用户的5%-20%。+ 响应时间    指应用系统从发出请求开始到客户端接收到所有数据所消耗的时间。   系统环境，网络，模拟真实环境，服务器的情况，发送请求-收到响应。think time-取决业务行为。+ 在线用户    在线用户不是给压力的概念。    注册用户&gt;在线用户&gt;活跃用户+ PV    页面查看访问+ 吞吐量    单位时间返回数据量,用在评估对比+ TPS    表示服务器每秒处理的事务数+ HPS（点击率）    每秒钟用户向服务器提交的HTTP请求数量+ 思考时间(Think Time)    指用户在进行操作时，每个请求之间的时间间隔。+ 业务成功率    成功的比率+ 系统资源耗用    + cpu    + 内存    + 网络带宽    + 磁盘</code></pre><h2 id="性能测试分类"><a href="#性能测试分类" class="headerlink" title="性能测试分类"></a>性能测试分类</h2><ul><li>负载测试(Load Testing)<ul><li>不断给系统加压，找到系统最大的负载能力，为性能调优提供数据。</li></ul></li><li>压力测试(Stress Testing)<ul><li>指系统已经面试官到一定的饱和程度，此时系统处理业务的能力，是否会有错误。</li></ul></li><li>配置测试(Configuration Testing)<ul><li>通过调整系统软硬件环境，了解各种不同环境对系统性能的影响，从而找到系统的最优配置。</li></ul></li><li>并发测试(Concurrency Testing)<ul><li>模拟用户并发访问，测试多用户同时访问同一应用、模块或数据，观察系统是存在死锁、系统处理速度是否明显下降等其他性能问题。</li></ul></li><li>可靠性测试(Reliability Testing)<ul><li>当系统在一定的业务压力下，让系统持续运行一段时间，观察系统是否达到要求的稳定性。</li></ul></li><li>基准测试(Benchmark Testing)<ul><li>主要是做比较时使用</li></ul></li></ul><h3 id="阶段"><a href="#阶段" class="headerlink" title="阶段"></a>阶段</h3><ul><li>编码<ul><li>并发、压力、容量测试</li></ul></li><li>测试<ul><li>负载、基准、配置测试</li></ul></li></ul><h2 id="性能测试需求分析"><a href="#性能测试需求分析" class="headerlink" title="性能测试需求分析"></a>性能测试需求分析</h2><pre><code>用户频繁使用，并且存在大量用户使用的系统关键功能点，并且存在大量数据操作与外部系统存在接口的，有互相调用关系，大量数据流转用户关注的，暂时会大量使用的要写系统性能分析，需要整理测试点，测试需求报告，要求对系统相当熟悉，确定测试点</code></pre><h2 id="业务模型的建立"><a href="#业务模型的建立" class="headerlink" title="业务模型的建立"></a>业务模型的建立</h2><pre><code>约束条件    数据约束        参数化        造测试数据    环境约束业务流程分析    后面action划分做准备业务流程图</code></pre><h2 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h2><pre><code>用例设计</code></pre>]]></content>
     
     <summary type="html">
     
@@ -58,11 +58,10 @@
       
         &lt;p&gt;提纲：&lt;/p&gt;
 &lt;h2 id=&quot;性能测试概念&quot;&gt;&lt;a href=&quot;#性能测试概念&quot; class=&quot;headerlink&quot; title=&quot;性能测试概念&quot;&gt;&lt;/a&gt;性能测试概念&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;+ 性能测试
+
 + 压力测试
+    长时间的稳定性能力
 + 负载测试
-+ 并发数
-+ 响应时间
-+
       
     
     </summary>
