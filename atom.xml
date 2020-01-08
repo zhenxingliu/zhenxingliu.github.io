@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhenxingliu.github.io/"/>
-  <updated>2020-01-08T08:56:38.892Z</updated>
+  <updated>2020-01-08T08:57:34.577Z</updated>
   <id>http://zhenxingliu.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大数据导论学习笔记(二)</title>
+    <link href="http://zhenxingliu.github.io/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/"/>
+    <id>http://zhenxingliu.github.io/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/</id>
+    <published>2020-01-08T08:57:17.000Z</published>
+    <updated>2020-01-08T08:57:34.577Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="大数据" scheme="http://zhenxingliu.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>大数据导论学习笔记(一)</title>
