@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhenxingliu.github.io/"/>
-  <updated>2020-02-16T13:19:13.007Z</updated>
+  <updated>2020-02-16T13:25:13.247Z</updated>
   <id>http://zhenxingliu.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://zhenxingliu.github.io/2020/02/16/vue-js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://zhenxingliu.github.io/2020/02/16/vue-js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2020-02-16T13:10:55.000Z</published>
-    <updated>2020-02-16T13:19:13.007Z</updated>
+    <updated>2020-02-16T13:25:13.247Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="基础学习列表"><a href="#基础学习列表" class="headerlink" title="基础学习列表"></a>基础学习列表</h2><ol><li><p>MVC和MVVM的区别</p><blockquote><p>MVC是一种后端开发思想，而前端主要使用MVVM的思想，其中VM是其中的关键因素</p></blockquote></li><li><p>学习了Vue中最基本代码的结构</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'app'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">    el:'#id',</span><br><span class="line">    data:&#123;&#125;,</span><br><span class="line">    methods:&#123;&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li><li><p>插值表达式</p><ul><li>v-cloak</li><li>v-text</li><li>v-html</li><li>v-bind(:)</li><li>v-on(@)</li><li>v-model</li><li>v-for</li><li>v-if</li><li>v-show</li></ul></li><li><p>事件修饰符</p><ul><li>.stop</li><li>.prevent</li><li>.capture</li><li>.self</li><li>.once</li></ul></li><li><p>对象主体属性</p><ul><li>el:指定控制区域</li><li>data:指定控制的区域内要用到的数据</li><li>methods:是个对象，自定义方法</li></ul></li><li><p>在v-for要会使用key属性(只接受string/number)</p></li><li><p>v-model只能应用于表单元素</p></li><li><p>在vue中绑定样式的两种方式v-bind:class v-bind:style</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="基础学习列表"><a href="#基础学习列表" class="headerlink" title="基础学习列表"></a>基础学习列表</h2><ol><li><p>MVC和MVVM的区别</p><blockquote><p>MVC是一种后端开发思想，而前端主要使用MVVM的思想，其中VM是其中的关键因素</p></blockquote></li><li><p>学习了Vue中最基本代码的结构</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'app'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">    el:'#id',</span><br><span class="line">    data:&#123;&#125;,</span><br><span class="line">    methods:&#123;&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li><li><p>插值表达式</p><ul><li>v-cloak:不显示插值表达式</li><li>v-text:显示数据并转义</li><li>v-html:显示数据不转义</li><li>v-bind(:)绑定属性</li><li>v-on(@):绑定事件</li><li>v-model:双向绑定</li><li>v-for:循环</li><li>v-if:判断</li><li>v-show:是否显示</li></ul></li><li><p>事件修饰符</p><ul><li>.stop:阻止事件冒泡</li><li>.prevent:禁止默认事件</li><li>.capture:外层捕获事件</li><li>.self:只对本身对象的事件响应</li><li>.once:事件只执行一次</li></ul></li><li><p>对象主体属性</p><ul><li>el:指定控制区域</li><li>data:指定控制的区域内要用到的数据</li><li>methods:是个对象，自定义方法</li></ul></li><li><p>在v-for要会使用key属性(只接受string/number)</p></li><li><p>v-model只能应用于表单元素</p></li><li><p>在vue中绑定样式的两种方式v-bind:class v-bind:style</p></li></ol>]]></content>
     
     <summary type="html">
     
