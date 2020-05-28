@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://zhenxingliu.github.io">
-  <title>Tag: 大数据 | 岁月随想</title>
+  <title>java并发编程一 | 岁月随想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="岁月随想">
-<meta property="og:url" content="http://zhenxingliu.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/index.html">
+  <meta name="description" content="1.线程介绍  一个进程之内可以分为一到多个线程  一个线程就是一个指令流，将指令流中一条条指令以一定的顺序交给CPU执行  Java中，线程作为最小调度单位，进程作为资源分配的最小单位 1.1 并发(concurrent)与并行(parallel)  并发是同一时间应对多件事情的能力  并行是同一时间动手做多件事情的能力   2.创建并启动线程 ​    2.1直接使用Thread 123456">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java并发编程一">
+<meta property="og:url" content="http://zhenxingliu.github.io/2020/03/31/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%80/index.html">
 <meta property="og:site_name" content="岁月随想">
+<meta property="og:description" content="1.线程介绍  一个进程之内可以分为一到多个线程  一个线程就是一个指令流，将指令流中一条条指令以一定的顺序交给CPU执行  Java中，线程作为最小调度单位，进程作为资源分配的最小单位 1.1 并发(concurrent)与并行(parallel)  并发是同一时间应对多件事情的能力  并行是同一时间动手做多件事情的能力   2.创建并启动线程 ​    2.1直接使用Thread 123456">
 <meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-03-31T12:00:39.000Z">
+<meta property="article:modified_time" content="2020-04-06T01:56:20.268Z">
 <meta property="article:author" content="blueheart">
+<meta property="article:tag" content="java,并发编程">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="岁月随想" type="application/atom+xml">
@@ -150,98 +155,318 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java并发编程一" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" class="archive-article-date">
-  	<time datetime="2020-01-08T08:57:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/">大数据导论学习笔记(二)</a>
+    <h1 class="article-title" itemprop="name">
+      java并发编程一
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/03/31/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%80/" class="archive-article-date">
+  	<time datetime="2020-03-31T12:00:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.线程介绍</p>
+<ul>
+<li><p>一个进程之内可以分为一到多个线程</p>
+</li>
+<li><p>一个线程就是一个指令流，将指令流中一条条指令以一定的顺序交给CPU执行</p>
+</li>
+<li><p>Java中，线程作为最小调度单位，进程作为资源分配的最小单位</p>
+<p>1.1 并发(concurrent)与并行(parallel)</p>
+</li>
+<li><p>并发是同一时间应对多件事情的能力</p>
+</li>
+<li><p>并行是同一时间动手做多件事情的能力</p>
+</li>
+</ul>
+<p>2.创建并启动线程</p>
+<p>​    2.1直接使用Thread</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构造方法的参数是给线程指定名字，推荐</span></span><br><span class="line">Thread t1 = <span class="keyword">new</span> Thread(<span class="string">"t1"</span>) &#123;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="comment">// run 方法内实现了要执行的任务</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">log.debug(<span class="string">"hello"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line">t1.start();</span><br></pre></td></tr></table></figure>
+
+
+
+<p>​    2.2 使用Runnable接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Runnable runnable = <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">// 要执行的任务</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 创建线程对象</span></span><br><span class="line">Thread t = <span class="keyword">new</span> Thread( runnable );</span><br><span class="line"><span class="comment">// 启动线程</span></span><br><span class="line">t.start();</span><br></pre></td></tr></table></figure>
+
+<p>​    2.3使用FutureTask配合Thread</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/ 创建任务对象</span><br><span class="line">FutureTask&lt;Integer&gt; task3 = <span class="keyword">new</span> FutureTask&lt;&gt;(() -&gt; &#123;</span><br><span class="line">log.debug(<span class="string">"hello"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">100</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 参数1 是任务对象; 参数2 是线程名字，推荐</span></span><br><span class="line"><span class="keyword">new</span> Thread(task3, <span class="string">"t3"</span>).start();</span><br><span class="line"><span class="comment">// 主线程阻塞，同步等待 task 执行完毕的结果</span></span><br><span class="line">Integer result = task3.get();</span><br><span class="line">log.debug(<span class="string">"结果是:&#123;&#125;"</span>, result);</span><br></pre></td></tr></table></figure>
+
+<p>​    2.4 查看线程 </p>
+<ul>
+<li>ps -fe 查看所有进程</li>
+<li>ps -fT -p <PID> 查看某个进程（PID）的所有线程</li>
+<li>kill 杀死进程</li>
+<li>top 按大写 H 切换是否显示线程</li>
+<li>top -H -p <PID> 查看某个进程（PID）的所有线程</li>
+</ul>
+<p>3.线程的生命周期</p>
+<p>4.Thread API详细介绍</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>static</th>
+<th>功能说明</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>start()</td>
+<td></td>
+<td>启动一个线程，在没有执行此方法前，是NEW</td>
+<td>每个线程对象只能调用一次，多次调用报IllegalThreadStateException</td>
+</tr>
+<tr>
+<td>run()</td>
+<td></td>
+<td>新线程启动会调用的方法</td>
+<td></td>
+</tr>
+<tr>
+<td>join()</td>
+<td></td>
+<td>等待线程运行结束</td>
+<td></td>
+</tr>
+<tr>
+<td>join(long n)</td>
+<td></td>
+<td>等待线程运行结束，最多等待n毫秒</td>
+<td></td>
+</tr>
+<tr>
+<td>getId()</td>
+<td></td>
+<td>获取线程长整型的id</td>
+<td></td>
+</tr>
+<tr>
+<td>getName()</td>
+<td></td>
+<td>获取线程名</td>
+<td></td>
+</tr>
+<tr>
+<td>setName(String)</td>
+<td></td>
+<td>修改线程名</td>
+<td></td>
+</tr>
+<tr>
+<td>getPriority()</td>
+<td></td>
+<td>获取线程优先级</td>
+<td></td>
+</tr>
+<tr>
+<td>setPriority(int)</td>
+<td></td>
+<td>修改线程优先级</td>
+<td></td>
+</tr>
+<tr>
+<td>getState()</td>
+<td></td>
+<td>获取线程状态</td>
+<td>6个enum,NEW,RUNNABLE,BLOCKED,WAITING,TIMED_WAITG,TERMINATED</td>
+</tr>
+<tr>
+<td>isInterrupted()</td>
+<td></td>
+<td>判断是否被打断</td>
+<td>不会清除打断标记</td>
+</tr>
+<tr>
+<td>isAlive()</td>
+<td></td>
+<td>线程是否存活</td>
+<td>还没有运行完毕</td>
+</tr>
+<tr>
+<td>interrupt()</td>
+<td></td>
+<td>打断线程</td>
+<td>如果被打断线程正在 sleep，wait，join 会导致被打断</td>
+</tr>
+<tr>
+<td><br/>的线程抛出 InterruptedException，并清除 打断标</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>记 ；如果打断的正在运行的线程，则会设置 打断标</p>
+<p>记 ；park 的线程被打断，也会设置 打断标记 |<br>| interrupted()    | static | 判断当前线程是否被打断                             | 会清除中断标记                                               |<br>| currentThread()  | static | 当前线程                                           | 获取当前正在运行的线程                                       |<br>| sleep(long n)    | static | 让当前执行线程休眠n毫秒时让出CPU的时间片给其它线程 | TIME_WAITTING                                                |<br>| yield()          | static | 让出时间片，使用CPU可以调度其它线程                | RUNNABLE状态                                                 |</p>
+<p>6.如何优雅的停止线程</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.blueheart.concurrency;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Thread.sleep;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test3</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        TwoPhaseTermination twoPhaseTermination = <span class="keyword">new</span> TwoPhaseTermination();</span><br><span class="line">        twoPhaseTermination.start();</span><br><span class="line">        Thread.sleep(<span class="number">3500</span>);</span><br><span class="line">        twoPhaseTermination.stop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 两阶段中止模式</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TwoPhaseTermination</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Thread monitor ;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>&#123;</span><br><span class="line">        monitor = <span class="keyword">new</span> Thread(() -&gt;&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                Thread currentThread = Thread.currentThread();</span><br><span class="line">                <span class="keyword">if</span> (currentThread.isInterrupted()) &#123;<span class="comment">//被打断，所以清理资源，停止</span></span><br><span class="line">                    log.debug(<span class="string">"清除资源停止"</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    sleep(<span class="number">1000</span>); <span class="comment">//i1 打断时会抛InterruptedException异常</span></span><br><span class="line">                    log.debug(<span class="string">"开始监控"</span>); <span class="comment">//i2 正常运行打断设置打断标记为True</span></span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                    currentThread.interrupt();<span class="comment">//设置打断标志为True</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        monitor.start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span></span>&#123;</span><br><span class="line">        log.debug(<span class="string">"开始停止"</span>);</span><br><span class="line">        monitor.interrupt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>synchronized</p>
+<p>1.轻量级锁</p>
+<p>2.锁彭胀(升级到重量锁)</p>
+<p>3.自旋优化（不用阻塞）</p>
+<p>4.偏向锁（刻上名字）</p>
+<p>wait notify</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java,并发编程</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zhenxingliu.github.io/2020/03/31/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="archive-article-date">
-  	<time datetime="2020-01-08T03:00:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/05/28/curl%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          curl使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/16/vue-js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue.js学习笔记（一）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/">大数据导论学习笔记(一)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -264,9 +489,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

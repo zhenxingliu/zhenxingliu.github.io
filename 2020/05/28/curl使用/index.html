@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://zhenxingliu.github.io">
-  <title>Tag: 大数据 | 岁月随想</title>
+  <title>curl使用 | 岁月随想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="岁月随想">
-<meta property="og:url" content="http://zhenxingliu.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/index.html">
+  <meta name="description" content="curl是一个开源的用于数据传输的命令行工具与库，它使用URL语法格式，支持众多传输协议，包括：HTTP、HTTPS、FTP、FTPS、GOPHER、TFTP、SCP、SFTP、SMB、TELNET、DICT、LDAP、LDAPS、FILE、IMAP、SMTP、POP3、RTSP和RTMP。curl库提供了很多强大的功能，你可以利用它来进行HTTP&#x2F;HTTPS请求、上传&#x2F;下载文件等，且支持Cook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="curl使用">
+<meta property="og:url" content="http://zhenxingliu.github.io/2020/05/28/curl%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="岁月随想">
+<meta property="og:description" content="curl是一个开源的用于数据传输的命令行工具与库，它使用URL语法格式，支持众多传输协议，包括：HTTP、HTTPS、FTP、FTPS、GOPHER、TFTP、SCP、SFTP、SMB、TELNET、DICT、LDAP、LDAPS、FILE、IMAP、SMTP、POP3、RTSP和RTMP。curl库提供了很多强大的功能，你可以利用它来进行HTTP&#x2F;HTTPS请求、上传&#x2F;下载文件等，且支持Cook">
 <meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-05-28T05:22:03.000Z">
+<meta property="article:modified_time" content="2020-05-28T05:29:03.629Z">
 <meta property="article:author" content="blueheart">
+<meta property="article:tag" content="curl">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="岁月随想" type="application/atom+xml">
@@ -150,98 +155,271 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-curl使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" class="archive-article-date">
-  	<time datetime="2020-01-08T08:57:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/">大数据导论学习笔记(二)</a>
+    <h1 class="article-title" itemprop="name">
+      curl使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/05/28/curl%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-05-28T05:22:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>curl</code>是一个开源的用于数据传输的命令行工具与库，它使用<code>URL</code>语法格式，支持众多传输协议，包括：HTTP、HTTPS、FTP、FTPS、GOPHER、TFTP、SCP、SFTP、SMB、TELNET、DICT、LDAP、LDAPS、FILE、IMAP、SMTP、POP3、RTSP和RTMP。<code>curl</code>库提供了很多强大的功能，你可以利用它来进行HTTP/HTTPS请求、上传/下载文件等，且支持Cookie、认证、代理、限速等。</p>
+<ol>
+<li><code>curl</code>的使用<ul>
+<li>[1.1 URL访问]</li>
+<li>[1.2 表单提交]</li>
+<li>[1.3 其它HTTP请求方法]</li>
+<li>[1.4 文件上传]</li>
+<li>[1.5 HTTPS支持]</li>
+<li>[1.6 添加请求头]</li>
+<li>[1.7 Cookie支持]</li>
+</ul>
+</li>
+<li><code>curl</code>语法及选项]</li>
+</ol>
+<h2 id="1-curl的使用"><a href="#1-curl的使用" class="headerlink" title="1. curl的使用"></a>1. <code>curl</code>的使用</h2><h3 id="1-1-URL访问"><a href="#1-1-URL访问" class="headerlink" title="1.1 URL访问"></a>1.1 URL访问</h3><p>访问一个网页时，可以使用<code>curl</code>命令后加上要访问的网址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ curl itbilu.com </span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;&#x2F;title&gt;&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body bgcolor&#x3D;&quot;white&quot;&gt;</span><br><span class="line">&lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;</span><br><span class="line">&lt;hr&gt;&lt;center&gt;nginx&#x2F;1.6.2&lt;&#x2F;center&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如上所示，我们就看到所访问网址的页面源码。</p>
+<p><strong>重定向跟踪</strong></p>
+<p>在上面示例中，页面使用了<a href="https://itbilu.com/nodejs/core/4yMyt38M.html" target="_blank" rel="noopener">301</a>重定向，这时我们可以添加<code>-L</code>参数来跟踪URL重定向：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -L itbilu.com</span><br></pre></td></tr></table></figure>
+
+<p><strong>页面保存</strong></p>
+<p>如果需要将页面源码保存到本地，可以使用<code>-o</code>参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o [文件名] itbilu.com</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看头信息</strong></p>
+<p>如果需要查看访问页面的可以添加<code>-i</code>或<code>--include</code>参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -i itbilu.com</span><br></pre></td></tr></table></figure>
+
+<p>添加<code>-i</code>参数后，页面响应头会和页面源码（响应体）一块返回。如果只想查看响应头，可以使用<code>-I</code>或<code>--head</code>参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ curl -I itbilu.com</span><br><span class="line">HTTP&#x2F;1.1 301 Moved Permanently</span><br><span class="line">Server: nginx&#x2F;1.6.2</span><br><span class="line">Date: Sun, 25 Jun 2017 02:03:45 GMT</span><br><span class="line">Content-Type: text&#x2F;html</span><br><span class="line">Content-Length: 184</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Location: https:&#x2F;&#x2F;itbilu.com&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2-表单提交"><a href="#1-2-表单提交" class="headerlink" title="1.2 表单提交"></a>1.2 表单提交</h3><p>通过<code>Form</code>表单，可以将Web页面的表单数据提交到服务端。提交表单时，可以使用<code>GET</code>或<code>POST</code>提交方法。</p>
+<p><code>curl</code>同样支持表单数据提交，也可以使用<code>GET</code>或<code>POST</code>提交方法。</p>
+<p><strong>GET数据提交</strong></p>
+<p>当全用<code>GET</code>表单数据提交时，提交数据会被附加到请求URL的后面。类型如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl &#39;&#x2F;&#x2F;itbilu.com&#x2F;?keyword&#x3D;linux&amp;page&#x3D;3&#39;</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>curl</code>进行<code>GET</code>数据提交时，也可以直接把提交数据添加到URL后面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https:&#x2F;&#x2F;itbilu.com&#x2F;?keyword&#x3D;linux&amp;page&#x3D;3</span><br></pre></td></tr></table></figure>
+
+<p><strong>POST数据提交</strong></p>
+<p><code>curl</code>使用<code>POST</code>提交表单数据时，除了<code>-X</code>参数指定请求方法外，还要使用<code>--data</code>参数添加提交数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -X POST --data &#39;keyword&#x3D;linux&#39; itbilu.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-3-其它HTTP请求方法"><a href="#1-3-其它HTTP请求方法" class="headerlink" title="1.3 其它HTTP请求方法"></a>1.3 其它HTTP请求方法</h3><p>目前为止，我们使用<code>GET</code>和<code>POST</code>两种HTTP请求。<code>curl</code>支持所有<a href="https://itbilu.com/other/relate/EkwKysXIl.html" target="_blank" rel="noopener">HTTP请求方法</a>，只要通过<code>-X</code>参数指定即可。</p>
+<p>如，使用<code>DELETE</code>请求：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -X DELETE itbilu.com&#x2F;examlple.html</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>PUT</code>请求，并指定请求数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -X PUT --data &#39;keyword&#x3D;linux&#39; itbilu.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-4-文件上传"><a href="#1-4-文件上传" class="headerlink" title="1.4 文件上传"></a>1.4 文件上传</h3><p><code>curl</code>支持文件上传，上传文件时使用<code>-T</code>或<code>--upload-file</code>参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -T .&#x2F;index.html www.uploadhttp.com&#x2F;receive.cgi</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-5-HTTPS支持"><a href="#1-5-HTTPS支持" class="headerlink" title="1.5 HTTPS支持"></a>1.5 HTTPS支持</h3><p>对于使用了<code>SSL/TLS</code>加密的HTTPS协议，可以使用<code>curl</code>直接访问：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https:&#x2F;&#x2F;itbilu.com</span><br></pre></td></tr></table></figure>
+
+<p>如果使用的本地<code>ssl证书</code>认证的HTTPS，可以通过<code>-E</code>或<code>--cert</code>参数指定本地证书：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -E mycert.pem https:&#x2F;itbilu.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-6-添加请求头"><a href="#1-6-添加请求头" class="headerlink" title="1.6 添加请求头"></a>1.6 添加请求头</h3><p>有时在进行HTTP请求时，需要自定义请求头。在<code>curl</code>中，可以通过<code>-H</code>或<code>--header</code>参数来指定请求头。多次使用<code>-H</code>或<code>--header</code>参数可指定多个请求头。</p>
+<p>如，指定<code>Content-Type</code>及<code>Authorization</code>请求头：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -H &#39;Content-Type:application&#x2F;json&#39; -H &#39;Authorization: bearer eyJhbGciOiJIUzI1NiJ9&#39; itbilu.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-7-Cookie支持"><a href="#1-7-Cookie支持" class="headerlink" title="1.7 Cookie支持"></a>1.7 Cookie支持</h3><p><a href="https://itbilu.com/other/relate/4J4n8fIPe.html" target="_blank" rel="noopener"><code>Cookie</code></a>是一种常用的保持服务端会话信息的方法，<code>crul</code>也支持使用<code>Cookie</code>。</p>
+<p>可以通过<code>--cookie</code>参数指定发送请求时的<code>Cookie</code>值，也可以通过<code>-b [文件名]</code>来指定一个存储了<code>Cookie</code>值的本地文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -b stored_cookies_in_file itbilu.com</span><br></pre></td></tr></table></figure>
+
+<p><code>Cookie</code>值可能会被服务器所返回的值所修改，并应用于下次HTTP请求。这时，可以能过<code>-c</code>参数指定存储服务器返回<code>Cookie</code>值的存储文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -b cookies.txt -c newcookies.txt itbilu.com</span><br></pre></td></tr></table></figure>
+
+
+
+<p>除以上用法外，<code>curl</code>还可以设置用户代理（客户端）信息、使用代理服务器、指定认证用户名／密码等。详见：<a href="https://itbilu.com/linux/man/4yZ9qH_7X.html#options" target="_blank" rel="noopener"><code>curl</code>语法及选项</a></p>
+<h2 id="2-curl语法及选项"><a href="#2-curl语法及选项" class="headerlink" title="2. curl语法及选项"></a>2. <code>curl</code>语法及选项</h2><p><strong>语法</strong></p>
+<p><code>curl</code>语法结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl [options...] &lt;url&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>参数选项</strong></p>
+<p><code>curl</code>（<code>7.29.0</code>）所支持的选项（<code>options</code>）参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br></pre></td><td class="code"><pre><span class="line">在以下选项中，(H) 表示仅适用 HTTP&#x2F;HTTPS ，(F) 表示仅适用于 FTP</span><br><span class="line">    --anyauth       选择 &quot;any&quot; 认证方法 (H)</span><br><span class="line">-a, --append        添加要上传的文件 (F&#x2F;SFTP)</span><br><span class="line">    --basic         使用HTTP基础认证（Basic Authentication）(H)</span><br><span class="line">    --cacert FILE   CA 证书，用于每次请求认证 (SSL)</span><br><span class="line">    --capath DIR    CA 证书目录 (SSL)</span><br><span class="line">-E, --cert CERT[:PASSWD] 客户端证书文件及密码 (SSL)</span><br><span class="line">    --cert-type TYPE 证书文件类型 (DER&#x2F;PEM&#x2F;ENG) (SSL)</span><br><span class="line">    --ciphers LIST  SSL 秘钥 (SSL)</span><br><span class="line">    --compressed    请求压缩 (使用 deflate 或 gzip)</span><br><span class="line">-K, --config FILE   指定配置文件</span><br><span class="line">    --connect-timeout SECONDS  连接超时设置</span><br><span class="line">-C, --continue-at OFFSET  断点续转</span><br><span class="line">-b, --cookie STRING&#x2F;FILE  Cookies字符串或读取Cookies的文件位置 (H)</span><br><span class="line">-c, --cookie-jar FILE  操作结束后，要写入 Cookies 的文件位置 (H)</span><br><span class="line">    --create-dirs   创建必要的本地目录层次结构</span><br><span class="line">    --crlf          在上传时将 LF 转写为 CRLF</span><br><span class="line">    --crlfile FILE  从指定的文件获得PEM格式CRL列表</span><br><span class="line">-d, --data DATA     HTTP POST 数据 (H)</span><br><span class="line">    --data-ascii DATA  ASCII 编码 HTTP POST 数据 (H)</span><br><span class="line">    --data-binary DATA  binary 编码 HTTP POST 数据 (H)</span><br><span class="line">    --data-urlencode DATA  url 编码 HTTP POST 数据 (H)</span><br><span class="line">    --delegation STRING GSS-API 委托权限</span><br><span class="line">    --digest        使用数字身份验证 (H)</span><br><span class="line">    --disable-eprt  禁止使用 EPRT 或 LPRT (F)</span><br><span class="line">    --disable-epsv  禁止使用 EPSV (F)</span><br><span class="line">-D, --dump-header FILE  将头信息写入指定的文件</span><br><span class="line">    --egd-file FILE  为随机数据设置EGD socket路径(SSL)</span><br><span class="line">    --engine ENGINGE  加密引擎 (SSL). &quot;--engine list&quot; 指定列表</span><br><span class="line">-f, --fail          连接失败时不显示HTTP错误信息 (H)</span><br><span class="line">-F, --form CONTENT  模拟 HTTP 表单数据提交（multipart POST） (H)</span><br><span class="line">    --form-string STRING  模拟 HTTP 表单数据提交 (H)</span><br><span class="line">    --ftp-account DATA  帐户数据提交 (F)</span><br><span class="line">    --ftp-alternative-to-user COMMAND  指定替换 &quot;USER [name]&quot; 的字符串 (F)</span><br><span class="line">    --ftp-create-dirs  如果不存在则创建远程目录 (F)</span><br><span class="line">    --ftp-method [MULTICWD&#x2F;NOCWD&#x2F;SINGLECWD] 控制 CWD (F)</span><br><span class="line">    --ftp-pasv      使用 PASV&#x2F;EPSV 替换 PORT (F)</span><br><span class="line">-P, --ftp-port ADR  使用指定 PORT 及地址替换 PASV (F)</span><br><span class="line">    --ftp-skip-pasv-ip 跳过 PASV 的IP地址 (F)</span><br><span class="line">    --ftp-pret      在 PASV 之前发送 PRET (drftpd) (F)</span><br><span class="line">    --ftp-ssl-ccc   在认证之后发送 CCC (F)</span><br><span class="line">    --ftp-ssl-ccc-mode ACTIVE&#x2F;PASSIVE  设置 CCC 模式 (F)</span><br><span class="line">    --ftp-ssl-control ftp 登录时需要 SSL&#x2F;TLS (F)</span><br><span class="line">-G, --get           使用 HTTP GET 方法发送 -d 数据  (H)</span><br><span class="line">-g, --globoff       禁用的 URL 队列 及范围使用 &#123;&#125; 和 []</span><br><span class="line">-H, --header LINE   要发送到服务端的自定义请求头 (H)</span><br><span class="line">-I, --head          仅显示响应文档头</span><br><span class="line">-h, --help          显示帮助</span><br><span class="line">-0, --http1.0       使用 HTTP 1.0 (H)</span><br><span class="line">    --ignore-content-length  忽略 HTTP Content-Length 头</span><br><span class="line">-i, --include       在输出中包含协议头 (H&#x2F;F)</span><br><span class="line">-k, --insecure      允许连接到 SSL 站点，而不使用证书 (H)</span><br><span class="line">    --interface INTERFACE  指定网络接口／地址</span><br><span class="line">-4, --ipv4          将域名解析为 IPv4 地址</span><br><span class="line">-6, --ipv6          将域名解析为 IPv6 地址</span><br><span class="line">-j, --junk-session-cookies 读取文件中但忽略会话cookie (H)</span><br><span class="line">    --keepalive-time SECONDS  keepalive 包间隔</span><br><span class="line">    --key KEY       私钥文件名 (SSL&#x2F;SSH)</span><br><span class="line">    --key-type TYPE 私钥文件类型 (DER&#x2F;PEM&#x2F;ENG) (SSL)</span><br><span class="line">    --krb LEVEL     启用指定安全级别的 Kerberos (F)</span><br><span class="line">    --libcurl FILE  命令的libcurl等价代码</span><br><span class="line">    --limit-rate RATE  限制传输速度</span><br><span class="line">-l, --list-only    只列出FTP目录的名称 (F)</span><br><span class="line">    --local-port RANGE  强制使用的本地端口号</span><br><span class="line">-L, --location      跟踪重定向 (H)</span><br><span class="line">    --location-trusted 类似 --location 并发送验证信息到其它主机 (H)</span><br><span class="line">-M, --manual        显示全手动</span><br><span class="line">    --mail-from FROM  从这个地址发送邮件</span><br><span class="line">    --mail-rcpt TO  发送邮件到这个接收人(s)</span><br><span class="line">    --mail-auth AUTH  原始电子邮件的起始地址</span><br><span class="line">    --max-filesize BYTES  下载的最大文件大小 (H&#x2F;F)</span><br><span class="line">    --max-redirs NUM  最大重定向数 (H)</span><br><span class="line">-m, --max-time SECONDS  允许的最多传输时间</span><br><span class="line">    --metalink      处理指定的URL上的XML文件</span><br><span class="line">    --negotiate     使用 HTTP Negotiate 认证 (H)</span><br><span class="line">-n, --netrc         必须从 .netrc 文件读取用户名和密码</span><br><span class="line">    --netrc-optional 使用 .netrc 或 URL; 将重写 -n 参数</span><br><span class="line">    --netrc-file FILE  设置要使用的 netrc 文件名</span><br><span class="line">-N, --no-buffer     禁用输出流的缓存</span><br><span class="line">    --no-keepalive  禁用 connection 的 keepalive</span><br><span class="line">    --no-sessionid  禁止重复使用 SSL session-ID (SSL)</span><br><span class="line">    --noproxy       不使用代理的主机列表</span><br><span class="line">    --ntlm          使用 HTTP NTLM 认证 (H)</span><br><span class="line">-o, --output FILE   将输出写入文件，而非 stdout</span><br><span class="line">    --pass PASS     传递给私钥的短语 (SSL&#x2F;SSH)</span><br><span class="line">    --post301       在 301 重定向后不要切换为 GET 请求 (H)</span><br><span class="line">    --post302       在 302 重定向后不要切换为 GET 请求 (H)</span><br><span class="line">    --post303       在 303 重定向后不要切换为 GET 请求 (H)</span><br><span class="line">-#, --progress-bar  以进度条显示传输进度</span><br><span class="line">    --proto PROTOCOLS  启用&#x2F;禁用 指定的协议</span><br><span class="line">    --proto-redir PROTOCOLS  在重定向上 启用&#x2F;禁用 指定的协议</span><br><span class="line">-x, --proxy [PROTOCOL:&#x2F;&#x2F;]HOST[:PORT] 在指定的端口上使用代理</span><br><span class="line">    --proxy-anyauth 在代理上使用 &quot;any&quot; 认证方法 (H)</span><br><span class="line">    --proxy-basic   在代理上使用 Basic 认证  (H)</span><br><span class="line">    --proxy-digest  在代理上使用 Digest 认证 (H)</span><br><span class="line">    --proxy-negotiate 在代理上使用 Negotiate 认证 (H)</span><br><span class="line">    --proxy-ntlm    在代理上使用 NTLM 认证 (H)</span><br><span class="line">-U, --proxy-user USER[:PASSWORD]  代理用户名及密码</span><br><span class="line">     --proxy1.0 HOST[:PORT]  在指定的端口上使用 HTTP&#x2F;1.0 代理</span><br><span class="line">-p, --proxytunnel   使用HTTP代理 (用于 CONNECT)</span><br><span class="line">    --pubkey KEY    公钥文件名 (SSH)</span><br><span class="line">-Q, --quote CMD     在传输开始前向服务器发送命令 (F&#x2F;SFTP)</span><br><span class="line">    --random-file FILE  读取随机数据的文件 (SSL)</span><br><span class="line">-r, --range RANGE   仅检索范围内的字节</span><br><span class="line">    --raw           使用原始HTTP传输，而不使用编码 (H)</span><br><span class="line">-e, --referer       Referer URL (H)</span><br><span class="line">-J, --remote-header-name 从远程文件读取头信息 (H)</span><br><span class="line">-O, --remote-name   将输出写入远程文件</span><br><span class="line">    --remote-name-all 使用所有URL的远程文件名</span><br><span class="line">-R, --remote-time   将远程文件的时间设置在本地输出上</span><br><span class="line">-X, --request COMMAND  使用指定的请求命令</span><br><span class="line">    --resolve HOST:PORT:ADDRESS  将 HOST:PORT 强制解析到 ADDRESS</span><br><span class="line">    --retry NUM   出现问题时的重试次数</span><br><span class="line">    --retry-delay SECONDS 重试时的延时时长</span><br><span class="line">    --retry-max-time SECONDS  仅在指定时间段内重试</span><br><span class="line">-S, --show-error    显示错误. 在选项 -s 中，当 curl 出现错误时将显示</span><br><span class="line">-s, --silent        Silent模式。不输出任务内容</span><br><span class="line">    --socks4 HOST[:PORT]  在指定的 host + port 上使用 SOCKS4 代理</span><br><span class="line">    --socks4a HOST[:PORT]  在指定的 host + port 上使用 SOCKSa 代理</span><br><span class="line">    --socks5 HOST[:PORT]  在指定的 host + port 上使用 SOCKS5 代理</span><br><span class="line">    --socks5-hostname HOST[:PORT] SOCKS5 代理，指定用户名、密码</span><br><span class="line">    --socks5-gssapi-service NAME  为gssapi使用SOCKS5代理服务名称 </span><br><span class="line">    --socks5-gssapi-nec  与NEC Socks5服务器兼容</span><br><span class="line">-Y, --speed-limit RATE  在指定限速时间之后停止传输</span><br><span class="line">-y, --speed-time SECONDS  指定时间之后触发限速. 默认 30</span><br><span class="line">    --ssl           尝试 SSL&#x2F;TLS (FTP, IMAP, POP3, SMTP)</span><br><span class="line">    --ssl-reqd      需要 SSL&#x2F;TLS (FTP, IMAP, POP3, SMTP)</span><br><span class="line">-2, --sslv2         使用 SSLv2 (SSL)</span><br><span class="line">-3, --sslv3         使用 SSLv3 (SSL)</span><br><span class="line">    --ssl-allow-beast 允许的安全漏洞，提高互操作性(SSL)</span><br><span class="line">    --stderr FILE   重定向 stderr 的文件位置. - means stdout</span><br><span class="line">    --tcp-nodelay   使用 TCP_NODELAY 选项</span><br><span class="line">-t, --telnet-option OPT&#x3D;VAL  设置 telnet 选项</span><br><span class="line">     --tftp-blksize VALUE  设备 TFTP BLKSIZE 选项 (必须 &gt;512)</span><br><span class="line">-z, --time-cond TIME  基于时间条件的传输</span><br><span class="line">-1, --tlsv1         使用 &#x3D;&gt; TLSv1 (SSL)</span><br><span class="line">    --tlsv1.0       使用 TLSv1.0 (SSL)</span><br><span class="line">    --tlsv1.1       使用 TLSv1.1 (SSL)</span><br><span class="line">    --tlsv1.2       使用 TLSv1.2 (SSL)</span><br><span class="line">    --trace FILE    将 debug 信息写入指定的文件</span><br><span class="line">    --trace-ascii FILE  类似 --trace 但使用16进度输出</span><br><span class="line">    --trace-time    向 trace&#x2F;verbose 输出添加时间戳</span><br><span class="line">    --tr-encoding   请求压缩传输编码 (H)</span><br><span class="line">-T, --upload-file FILE  将文件传输（上传）到指定位置</span><br><span class="line">    --url URL       指定所使用的 URL</span><br><span class="line">-B, --use-ascii     使用 ASCII&#x2F;text 传输</span><br><span class="line">-u, --user USER[:PASSWORD]  指定服务器认证用户名、密码</span><br><span class="line">    --tlsuser USER  TLS 用户名</span><br><span class="line">    --tlspassword STRING TLS 密码</span><br><span class="line">    --tlsauthtype STRING  TLS 认证类型 (默认 SRP)</span><br><span class="line">    --unix-socket FILE    通过这个 UNIX socket 域连接</span><br><span class="line">-A, --user-agent STRING  要发送到服务器的 User-Agent (H)</span><br><span class="line">-v, --verbose       显示详细操作信息</span><br><span class="line">-V, --version       显示版本号并退出</span><br><span class="line">-w, --write-out FORMAT  完成后输出什么</span><br><span class="line">    --xattr        将元数据存储在扩展文件属性中</span><br><span class="line">-q                 .curlrc 如果作为第一个参数无效</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">curl</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zhenxingliu.github.io/2020/05/28/curl%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="archive-article-date">
-  	<time datetime="2020-01-08T03:00:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/05/28/wget%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          wget使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/31/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java并发编程一</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/">大数据导论学习笔记(一)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -264,9 +442,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
